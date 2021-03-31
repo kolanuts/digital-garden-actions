@@ -52,7 +52,6 @@ jobs:
           ROAMRESEARCH_USER: ${{ secrets.ROAM_EMAIL }}
           ROAMRESEARCH_PASSWORD: ${{ secrets.ROAM_PASSWORD }}
           ROAMRESEARCH_DATABASE: ${{ secrets.ROAM_GRAPH }}
-
       - name: Commit Changes
         uses: everruler12/git-auto-commit-action@latest
         with:
