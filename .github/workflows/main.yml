@@ -37,7 +37,7 @@ jobs:
           npm i
           npm run backup -s
         env:
-          ROAM_EMAIL: ${{ secrets.ROAM_USER }}
+          ROAM_EMAIL: ${{ secrets.ROAM_EMAIL }}
           ROAM_PASSWORD: ${{ secrets.ROAM_PASSWORD }}
           ROAM_GRAPH: ${{ secrets.ROAM_GRAPH }}
           BACKUP_EDN: false
@@ -49,7 +49,7 @@ jobs:
       - name: Generate notes
         run: roam-to-git --skip-fetch --skip-git .
         env:
-          ROAMRESEARCH_USER: ${{ secrets.ROAM_USER }}
+          ROAMRESEARCH_USER: ${{ secrets.ROAM_EMAIL }}
           ROAMRESEARCH_PASSWORD: ${{ secrets.ROAM_PASSWORD }}
           ROAMRESEARCH_DATABASE: ${{ secrets.ROAM_GRAPH }}
 
