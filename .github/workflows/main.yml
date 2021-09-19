@@ -42,6 +42,7 @@ jobs:
           ROAM_GRAPH: ${{ secrets.ROAM_GRAPH }}
           BACKUP_EDN: false
           MD_SKIP_BLANKS: false
+          SKIP_BACKLINK_NOTES: true
 
       - name: Setup dependencies
         run: |
