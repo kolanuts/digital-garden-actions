@@ -42,7 +42,6 @@ jobs:
           ROAM_GRAPH: ${{ secrets.ROAM_GRAPH }}
           BACKUP_EDN: false
           MD_SKIP_BLANKS: false
-          SKIP_BACKLINK_NOTES: true
 
       - name: Setup dependencies
         run: |
@@ -53,6 +52,7 @@ jobs:
           ROAMRESEARCH_USER: ${{ secrets.ROAM_EMAIL }}
           ROAMRESEARCH_PASSWORD: ${{ secrets.ROAM_PASSWORD }}
           ROAMRESEARCH_DATABASE: ${{ secrets.ROAM_GRAPH }}
+          SKIP_BACKLINK_NOTES: true
       - name: Commit Changes
         uses: everruler12/git-auto-commit-action@latest
         with:
